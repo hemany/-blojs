@@ -1,0 +1,17 @@
+<style>
+html{color:#000;background:#FFF;font-family:Microsoft YaHei,sans-serif,Arial,'    ';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong,img{padding:0;margin:0;}
+table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}a{text-decoration:none;outline:none;}var,em,i{font-style:normal;}
+address,caption,cite,code,dfn,em,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}
+caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+
+.clearfix:after{content: '';clear: both;display: block;}
+.clearfix{zoom:1;}
+.left{float: left;}
+.right{float: right;}
+ol,ul,li{
+	list-style: none;
+}
+a{-webkit-transition:all 0.2s linear 0s;-moz-transition: all 0.2s linear 0s;transition: all 0.2s linear 0s;}
+</style>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" href="public/css/res.css">
+	<link rel="stylesheet" href="public/css/index.css">
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <title>sign Up</title>
+    <script src="public/js/vue1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="public/js/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+    <script src="public/js/index.js"></script>
+</head>
+<body v-cloak>
+	<div class="ywq_box">
+		<div class="ywq_top">
+			<div class="ywq_topleft">
+				<img src="img/ywq_logo.jpg">
+			</div>
+			<div class="ywq_topright">
+				<a href="#" class="ywq_a">LIFESTYLE</a>
+				<a href="#">PHOTODLARY</a>
+				<a href="#">MUSIC</a>
+				<a href="http://localhost:9889/views/ueditor.html">ISSUE</a>
+				<span @click="login">{{user}}</span>
+			</div>
+		</div>
+		<div class="ywq_pick" v-for="i in msa">
+			<img :src="['img/'+i.file]" alt="">
+		</div>
+		<div class="ywq_conent" v-for="i in msa">
+			<p>PHOTODIARY</p>
+			<p>{{i.title}}</p>
+			<div v-html="i.content"></div>
+			<a href="#">LEAVE A COMMENT</a>
+		</div>
+		<div class="ywq_text clearfix" >
+			<div class="ywq_one" v-for="i in msg | limitBy num">
+				<a :href="['http://localhost:9889/views/detail.html?id='+i.ID]">
+					<div class="y_topimg">
+						<img v-bind:src="['img/'+i.file]"  alt="">
+					</div>
+					<p>LIFESTYLE</p>
+					<p>{{i.title}}</p>
+					<p>{{i.introduce}}</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="ywq_center">
+		<div class="ywq_box">
+			<div class="ywq_sign">
+			<a href="http://localhost:9889/views/sign.html"><button class="btn btn-default btn-info" style="margin-top:130px;margin-left:90px;">登录</button></a>
+			<a href="http://localhost:9889/views/sign.html"><button class="btn btn-default btn-info" style="margin-top:130px;margin-left:140px;">注册</button></a>
+			
+				<!-- <p>Sign up for our newsletter!s</p>
+				<div class="ywq_fly">
+					<span>Enter a valid email address</span>
+					<img src="img/ywq6.jpg" alt="">
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="ywq_box">
+		<div class="clearfix">
+			<div class="ywq_one" v-for="i in msg | limitBy nums">
+				<a :href="['http://localhost:9889/views/detail.html?id='+i.ID]">
+					<div class="y_topimg">
+						<img v-bind:src="['img/'+i.file]" alt="">
+					</div>
+					<p>LIFESTYLE</p>
+					<p>{{i.title}}</p>
+					<p>{{i.introduce}}</p>
+				</a>
+			</div>
+		</div>
+		
+		<div class="ywq_more">
+				<div class="ywq_moretext" @click="more">
+					Load more
+				</div>
+		</div>
+	</div>
+	<div class="ywq_footer">
+		<div class="ywq_box">
+			<div class="ywq_footerleft">
+				<span><a href="#">Terms and conditions</a></span>
+				<span><a href="#">Privacy</a></span>
+			</div>
+			<div class="ywq_footerright">
+				<a href="#">Follow</a>
+				<a href="#"><img src="img/ywq9.jpg" alt=""></a>
+				<a href="#"><img src="img/ywq10.jpg" alt=""></a>
+				<a href="#"><img src="img/ywq11.jpg" alt=""></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

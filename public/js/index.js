@@ -1,0 +1,55 @@
+window.onload=function(){
+	new Vue({
+		el:"body",
+		data:{
+			msg:[],
+			msa:[],
+			user:"login",
+			id:"",
+			num:"4",
+			nums:"2"
+		},
+		ready:function(){
+			if(document.cookie){
+				this.id=document.cookie.split("=")[1]
+				console.log(this.id)
+				this.$http.get("http://localhost:9889/motion",{
+					userId:this.id
+				}).then((data)=>{
+					console.log(data.data)
+					this.user=data.data.user
+					this.msg=data.data.data.reverse()
+					this.msa=data.data.datas
+					console.log(this.msg)
+				},()=>{
+					console.log("失败")
+				})
+
+			}else{
+				this.$http.get("http://localhost:9889/cont").then((data)=>{
+					this.user=data.data.user
+					this.msg=data.data.data.reverse()
+					this.msa=data.data.datas
+					console.log(this.msa)
+					console.log(this.msg)
+				},()=>{
+					console.log("失败")
+				})
+			}
+		},
+		methods:{
+			login:function(){
+				if(this.user=="login"){
+					window.location.href="http://localhost:9889/views/sign.html"
+				}
+			},
+			more:function(){
+				if(Number(this.nums)>=this.msg.length){
+					this.nums=this.msg.length
+				}else{
+					this.nums=Number(this.nums)+2
+				}
+			}
+		}
+	})
+}

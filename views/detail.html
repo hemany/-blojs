@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/res.css" />
+        <link rel="stylesheet" href="../public/css/detail.css" />
+        <link rel="stylesheet" href="../public/css/res.css" />
+        <title>sign Up</title>
+        <script src="../public/js/vue1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../public/js/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../public/js/detail.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+    <div class="mo">
+        <div class="header">
+            <div class="head">
+                <div class="logo">
+                    <a href="http://localhost:9889/index.html"><img src="../img/yqf-logo.png" height="23" width="119" alt="" /></a>
+                </div>
+                <div class="nav">
+                    <a href="#">LIFESTYLE</a>
+                    <a href="#">PHOTODLARY</a>
+                    <a href="#">MUSIC</a>
+                    <a href="http://localhost:9889/views/ueditor.html">ISSUE</a>
+                    <span @click="users">{{user}}</span>
+                </div>
+            </div>
+        </div>
+        <!-- 头部 -->
+        <!-- banner -->
+        <div class="banner" v-for="i in msg">
+            <div class="banner-main">
+                <img :src="['../img/'+i.file]" width="1062" alt="" />
+            </div>
+        </div>
+        <div class="main clear" v-for="i in msg">
+            <div class="main-con">
+                <div class="con-one">
+                    <p class="stit">PHOTODIARY</p>
+                    <h3>{{i.title}}</h3>
+                    <div class="font" v-html="i.content">
+                    </div>
+                </div>
+                <div class="scr"  v-for="i in msa" >
+                    <div v-html="i.content" v-reset></div>
+                </div>
+                 <p class="msg-three clear">
+                        <span><a href="#">SHARE</a><a href="#"><img src="../img/yqf-icof.jpg"></a><a href="#"><img src="../img/yqf-icob.jpg"></a><a href="#"><img src="../img/yqf-icog.jpg"></a><a href="#"><img src="../img/yqf-icot.jpg"></a><a href="#"><img src="../img/yqf-icoq.jpg"></a></span>
+                    </p>
+            </div>
+        </div>
+        <div class="slicon clear">
+            <div class="main-slicon">
+                <h4>YOU MAY ALSO LIKE</h4>
+                <div class="allbox clear">
+                    <div v-for="i in mss | limitBy 3">
+                        <a :href="['http://localhost:9889/views/detail.html?id='+i.ID]">
+                        <p><img :src="['../img/'+i.file]" height="316" width="453" alt="" /></p>
+                        <p>Cold winter days</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment clear">
+            <div class="comment-con clear">
+                <h3>2COMMENTS</h3>
+                <div class="allcom">
+                    <div class="comm" v-for="i in sayone"> 
+                        <div class="pho">
+                            <img src="../img/yqf-pho.jpg">
+                        </div>
+                        <div class="yqf-con">
+                            <h4>{{i.name}}</h4>
+                            <p>{{i.say}}</p>
+                            <input type="button" value="REPLY" class="ipt"/>
+                        </div>
+                        
+                    </div>
+                    <div class="comm">
+                        <div class="pho">
+                            <img src="../img/yqf-pho.jpg">
+                        </div>
+                        <div class="yqf-con">
+                            <textarea v-model="say"></textarea>
+                            <p class="allbtn">
+                                <input type="button" value="CONNECTED WITH" class="ipt" @click="pin">
+                                <a href="javascript:;"><img src="../img/yqf-icob.jpg"></a>
+                                <a href="javascript:;"><img src="../img/yqf-icono.jpg"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer clear">
+            <div class="foot">
+                <p class="left">Terms and conditions Privacy</p>
+                <p class="right"><span>Follow</span><a href="javascript:;"><img src="../img/yqf-icono.jpg"></a><a href="javascript:;"><img src="../img/yqf-icontw.jpg"></a><a href="javascript:;"><img src="../img/yqf-icont.jpg"></a></p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

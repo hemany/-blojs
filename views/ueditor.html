@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/info.css" rel="stylesheet">
+    <link href="../public/css/reset.css" rel="stylesheet">
+    <script src="../public/js/vue1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../public/js/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <style type="text/css">
+        div{
+            width:100%;
+        }
+        .editor_h1{
+            text-align: center;
+        }
+        #editor{
+            margin:0 auto;
+            margin-bottom: 20px;
+        }
+        #editor1{
+            margin:0 auto;
+            margin-bottom: 20px;
+        }
+         img{
+            width: 200px;
+            height: 200px;
+        }
+        .box{width:500px;height:300px;border: solid 1px black;position: absolute;top:50%;left: 50%;margin-left: -250px;margin-top:-200px;border-radius: 10px;padding: 50px;transition: 1s;}
+        .modal-body .input-group{width:100%;}
+    </style>
+</head>
+<body>
+<div class="container">
+  <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#release">发布文章</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modify">修改首页</button>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="release">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">发布文章</h4>
+        </div>
+        <div class="modal-body">
+            <div class="input-group" style="margin-bottom:20px;">
+                <div class="input-group-addon" style="width:200px;">标题</div>
+                <input type="text" class="form-control" v-model='title'>
+            </div>
+            <div class="input-group" style="margin-bottom:20px;">
+                <div class="input-group-addon" style="width:200px;">封面图片</div>
+                <input type="file" class="form-control" id="file">
+            </div>
+            <div class="input-group" style="margin-bottom:20px;">
+                <div class="input-group-addon" style="width:200px;">简介</div>
+                <input type="text" class="form-control" v-model='introduce'>
+            </div>
+            <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
+            <input type="button" name="" value='发布' class="btn btn-block btn-default btn-primary" style="width:100%;" @click='release'>
+        </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="modify">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">修改文章</h4>
+        </div>
+        <div class="modal-body">
+            <div class="input-group" style="margin-bottom:20px;">
+                <div class="input-group-addon" style="width:200px;">标题</div>
+                <input type="text" class="form-control" v-model='title1'>
+            </div>
+            <div class="input-group" style="margin-bottom:20px;">
+                <div class="input-group-addon" style="width:200px;">图片</div>
+                <input type="file" class="form-control" id="file1">
+            </div>
+            <script id="editor1" type="text/plain" style="width:100%;height:400px;"></script>
+            <input type="button" name="" value='修改' class="btn btn-block btn-default btn-primary" style="width:100%;" @click='modify'>
+        </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- <button type="button" class="btn btn-primary">（首选项）Primary</button> -->
+<!-- <div class="box">
+    <div class="text-center h3">欢迎管理员的到来~</div>
+    <div class="input-group">
+        <div class="input-group-addon" style="width:150px;">账号</div>
+        <input type="text" class="form-control" v-model='user'>
+    </div>
+    <div class="input-group">
+        <div class="input-group-addon" style="width:150px;">密码</div>
+        <input type="text" class="form-control" v-model='pass'>
+    </div>
+    <input type="button" name="" value='登录' class="btn btn-block btn-default btn-primary" style="margin-top:30px;" @click='login' v-totop>
+    <div style="width:20px;height:20px;background:red"></div>
+</div> -->
+<!-- <div>
+    <h1 class="editor_h1">完整demo</h1>
+    <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+</div> -->
+<script src="../public/js/jq.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/info.js"></script>
+<script type="text/javascript">
+    var ue = UE.getEditor('editor');
+    var ua = UE.getEditor('editor1');
+    if(document.cookie){
+                if(document.cookie.split("=")[1]==""){
+                    window.location.href="http://localhost:9889/views/sign.html"
+                }
+            }else{
+                window.location.href="http://localhost:9889/views/sign.html"
+            }
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+body{
+    overflow-x: hidden;
+}
+.wjl-box{
+    width:1062px;
+    margin:0 auto;
+}
+.wjl-head{
+    height:181px;
+}
+.wjl-logo{
+    height:22px;
+    width:119px;
+    padding:69px 0px 90px;
+}
+.wjl-logo img{
+    height:22px;
+    width:119px;
+}
+.wjl-nav{
+    width:571px;
+    height:22px;
+    padding:69px 0px 90px;
+}
+.wjl-nav a{
+    display:inline-block;
+    font-size: 12px;
+    color:#5a5a5a;
+    padding-right:100px;
+}
+.wjl-nav a:nth-child(4){
+    padding-right:0px;
+}
+/*header-end*/
+.wjl-ban{
+    height:491px;
+    width:1062px;
+}
+.wjl-ban img{
+    height:491px;
+    width:100%;
+}
+/*banner-end*/
+/*sign-start*/
+.sign{
+    height:395px;
+    margin-top:60px;
+    margin-bottom: 124px;
+}
+.wjl-signl{
+    width:518px;
+    height:395px;
+    border-right:1px solid #eeeeee;
+    box-sizing: border-box;
+}
+.wjl-signl p{
+    font-size: 13px;
+    color:#575153;
+    margin-bottom: 47px;
+}
+.wjl-signl input{
+    width:500px;
+    height:40px;
+    margin-bottom: 34px;
+    outline:none;
+    border-color: #e7e7e7;
+    text-indent: 10px;
+    font-size: 11px;
+    box-sizing: border-box;
+}
+.wjl-signb button{
+    width:150px;
+    height:60px;
+    background-color: #00c8c8;
+    outline:none;
+    border:none;
+    color:#fff;
+    font-size: 11px;
+}
+.wjl-signb a{
+    font-size: 11px;
+    color:#55dada;
+    margin-top:25px;
+    margin-right:25px;
+}
+
+.wjl-signr{
+    width:525px;
+    height:395px; 
+    margin-left: 16px;
+}
+.wjl-signr p{
+    font-size: 13px;
+    color:#575153;
+    margin-bottom: 47px;
+}
+.wjl-signr input{
+    width:500px;
+    height:40px;
+    margin-bottom: 34px;
+    outline:none;
+    border-color: #e7e7e7;
+    text-indent: 10px;
+    font-size: 11px;
+    box-sizing: border-box;
+}
+.wjl-signr p{
+    font-size: 12px;
+    color:#b4b2b2;
+}
+#wjl-check{
+    width:24px;
+    height:24px;
+    margin-bottom: 0px;
+}
+.wjl-chear p{
+    font-size: 12px;
+    color:#b4b2b2;
+    margin-bottom: 0px;
+}
+.wjl-create{
+    width:242px;
+    height:60px;
+    line-height: 60px;
+    text-align: center;
+    border:2px solid #737373;
+    box-sizing: border-box;
+    margin-top:20px;
+    font-size: 12px;
+    color:#454647;
+    margin-left: -24px;
+}
+.wjl-by{
+    margin-top:30px;
+}
+/*sign-end*/
+.wjl-font{
+    width:100%;
+    height:589px;
+    background-color: #f8f8f8;
+}
+.wjl-tit{
+   height:589px; 
+}
+.wjl-top{
+    height:333px;
+}
+.wjl-top ul{
+    margin-top:64px;
+    margin-right:95px;
+}
+.wjl-top ul:nth-child(5){
+    margin-right: 0px;
+}
+.wjl-top ul p{
+    font-size: 13px;
+    color:#575153;
+    margin-bottom: 34px;
+}
+.wjl-top ul li a{
+    font-size: 11px;
+    color:#727272;
+}
+.wjl-top ul li a:hover{
+    color:#00c8c8;
+}
+.wjl-bottom{
+    height:256px;
+}
+.wjl-award{
+    width:500px;
+    height:200px;
+    background-color: #333333;
+    color:#ffffff;
+}
+.wjl-write{
+    height:62px;
+}
+.wjl-award p{
+    font-size: 27px;
+    text-align: center;
+}
+.wjl-win{
+    width:500px;
+    height:200px;
+    background-color: #00c8c8;
+    color:#ffffff;
+}
+.wjl-k{
+    padding:80px 100px 0px;
+}
+.wjl-k img{
+    margin:0px 20px;
+}
+/*font*/
+/*foot-start*/
+.wjl-foot{
+    width:100%;
+    height:98px;
+    background-color: #f3f3f3;
+}
+.wjl-foots p{
+    font-size: 12px;
+    color:#030303;
+    line-height: 98px;
+}
+.wjl-foots p img{
+    margin:0px 8px;
+}
+/*foot-end*/
